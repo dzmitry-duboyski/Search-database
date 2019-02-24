@@ -118,25 +118,3 @@ if(mysqli_connect_errno()){
 </table>
 </body>
 </html>
-<!-- "id"
-	"Surname"
-	"Name"
-	"Patronymic"
-	"DOB"
-	"Document"
-	"Сountry"
-	"WorkDescription"
-	"Sity"
-	"Region"
-	"ResidentialAddress"
-	"Phone"
-	"HistoryNamber"
-	"YearInReceiver"
-	"DateInReceiver"
-	"TimeInReceiver"
-	"TimeOutReceiver"
-	"DepartmentIn"
-	"DepartmentOut"
-	"DeliveredBy"
-	"FinalDiagnosis"
-	"TypeMedicalHelp" -->
