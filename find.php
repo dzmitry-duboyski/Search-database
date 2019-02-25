@@ -48,13 +48,39 @@ if(mysqli_connect_errno()){
 <?php
 	//2. Выполнить запрос БД
 	//2. Perform database query
-	$query="SELECT * FROM patient where Surname='$fio[0]' and Name='$fio[1]' and Patronymic='$fio[2]' ";
-	//Выполняем запрос к БД
-	$result=mysqli_query($connection,$query);
-	//проверяем успешность выполнения запроса
-	if (!$result)
-	{
-		die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+
+// поиск только по ФИО
+		$query="SELECT * FROM patient where Surname='$fio[0]' and Name='$fio[1]' and Patronymic='$fio[2]' ";
+		//Выполняем запрос к БД
+		$result=mysqli_query($connection,$query);
+		//проверяем успешность выполнения запроса
+		if (!$result)
+		{
+			die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+		}
+
+// поиск только по фамилии и имени(без отчества)
+	if ($fio[2]=="") {
+		$query="SELECT * FROM patient where Surname='$fio[0]' and Name='$fio[1]'";
+		//Выполняем запрос к БД
+		$result=mysqli_query($connection,$query);
+		//проверяем успешность выполнения запроса
+		if (!$result)
+		{
+			die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+		}
+	}
+
+// поиск только по фамилии
+	if ($fio[1]=="" and $fio[2]=="") {
+		$query="SELECT * FROM patient where Surname='$fio[0]'";
+		//Выполняем запрос к БД
+		$result=mysqli_query($connection,$query);
+		//проверяем успешность выполнения запроса
+		if (!$result)
+		{
+			die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+		}
 	}
 ?>
 <br>
@@ -87,8 +113,10 @@ if(mysqli_connect_errno()){
 <?php
 	//3. Use returned data (if any)
 	//3. Использование возвращаемых данных
+	$findresult=0;
 	while ($row=mysqli_fetch_assoc($result))
 	{
+		$findresult++;
 		//Выводить данные каждого ряда
 		//var_dump($row);
 		//echo $row[4];
@@ -112,31 +140,10 @@ if(mysqli_connect_errno()){
 		echo "<th>".$row["FinalDiagnosis"]."</th>";
 	}
 	echo "<br>";
+	echo '<br>Колличество найденных записей:'.$findresult;
 ?>
 	</tr>
 <tbody>
 </table>
 </body>
 </html>
-<!-- "id"
-	"Surname"
-	"Name"
-	"Patronymic"
-	"DOB"
-	"Document"
-	"Сountry"
-	"WorkDescription"
-	"Sity"
-	"Region"
-	"ResidentialAddress"
-	"Phone"
-	"HistoryNamber"
-	"YearInReceiver"
-	"DateInReceiver"
-	"TimeInReceiver"
-	"TimeOutReceiver"
-	"DepartmentIn"
-	"DepartmentOut"
-	"DeliveredBy"
-	"FinalDiagnosis"
-	"TypeMedicalHelp" -->
