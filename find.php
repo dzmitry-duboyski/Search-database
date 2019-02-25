@@ -42,20 +42,61 @@ if(mysqli_connect_errno()){
 		$fio=$_POST["fio"];
 		$fio=parsingString($fio);
 		echo 'Результаты поиска по запросу: ',"${fio[0]}",' ',"${fio[1]}",' ',"${fio[2]}";
+		echo '<br>Колличество найденных записей:';
 	}
 ?>
 <br>
 <?php
 	//2. Выполнить запрос БД
 	//2. Perform database query
-	$query="SELECT * FROM patient where Surname='$fio[0]' and Name='$fio[1]' and Patronymic='$fio[2]' ";
-	//Выполняем запрос к БД
-	$result=mysqli_query($connection,$query);
-	//проверяем успешность выполнения запроса
-	if (!$result)
-	{
-		die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+	// поиск только по фамилии
+	if ($fio[1]=="" and $fio[2]=="") {
+		# code...
+		$query="SELECT * FROM patient where Surname='$fio[0]'";
+
+		#echo "<pre>";
+		#print_r($query);echo "<hr>";
+		#echo "</pre>";	
+		
+		//Выполняем запрос к БД
+		$result=mysqli_query($connection,$query);
+		//проверяем успешность выполнения запроса
+		if (!$result)
+		{
+			die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+		}
 	}
+
+
+
+
+
+
+/*$query="SELECT * FROM patient where Surname='$fio[0]' and Name='$fio[1]' and Patronymic='$fio[2]' ";
+
+		#echo "<pre>";
+		#print_r($query);echo "<hr>";
+		#echo "</pre>";	
+		
+		//Выполняем запрос к БД
+		$result=mysqli_query($connection,$query);
+		//проверяем успешность выполнения запроса
+		if (!$result)
+		{
+			die("<h1>Database query failed.<br>Запрос в Базу Данных не удался.</h1>");
+		}*/
+
+
+
+
+
+
+
+
+
+
+
+	
 ?>
 <br>
 <a href='index.php'>Назад к поиску</a>
