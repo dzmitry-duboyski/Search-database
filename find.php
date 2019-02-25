@@ -42,7 +42,6 @@ if(mysqli_connect_errno()){
 		$fio=$_POST["fio"];
 		$fio=parsingString($fio);
 		echo 'Результаты поиска по запросу: ',"${fio[0]}",' ',"${fio[1]}",' ',"${fio[2]}";
-		echo '<br>Колличество найденных записей:';
 	}
 ?>
 <br>
@@ -114,8 +113,10 @@ if(mysqli_connect_errno()){
 <?php
 	//3. Use returned data (if any)
 	//3. Использование возвращаемых данных
+	$findresult=0;
 	while ($row=mysqli_fetch_assoc($result))
 	{
+		$findresult++;
 		//Выводить данные каждого ряда
 		//var_dump($row);
 		//echo $row[4];
@@ -139,6 +140,7 @@ if(mysqli_connect_errno()){
 		echo "<th>".$row["FinalDiagnosis"]."</th>";
 	}
 	echo "<br>";
+	echo '<br>Колличество найденных записей:'.$findresult;
 ?>
 	</tr>
 <tbody>
