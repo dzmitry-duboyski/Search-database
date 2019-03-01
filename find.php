@@ -40,6 +40,7 @@ if(mysqli_connect_errno()){
 	if (isset($_POST["submit"]))
 	{
 		$fio=$_POST["fio"];
+		$fio=mysqli_real_escape_string($connection,$fio);/*экранирование*/
 		$fio=parsingString($fio);
 		echo 'Результаты поиска по запросу: ',"${fio[0]}",' ',"${fio[1]}",' ',"${fio[2]}";
 	}
@@ -95,16 +96,16 @@ if(mysqli_connect_errno()){
 			<th>Отчество</th>
 			<th>Дата рождения</th>
 			<th>Паспорт</th>
-			<th>Работа</th>
-			<th>Город</th>
 			<th>Адрес проживания</th>
-			<th>Телефон</th>
 			<th>Дата поступления</th>
-			<th>Время поступления в ПР покой</th>
 			<th>Дата выписки</th>
 			<th>Отделение при поступлении</th>
 			<th>Отделение при выписке</th>
-			<th>Тип оказанной помощи</th>
+			<th>Тип оказанной помощи</th>					
+			<th>Работа</th>
+			<th>Город</th>
+			<th>Телефон</th>
+		   	<th>Время поступления в ПР покой</th>
 			<th>Заключительный диагноз</th>
 		</tr>
 	</thead>
@@ -127,16 +128,16 @@ if(mysqli_connect_errno()){
 		echo "<th>".$row["Patronymic"]."</th>";
 		echo "<th>".$row["DOB"]."</th>";
 		echo "<th>".$row["Document"]."</th>";
-		echo "<th>".$row["WorkDescription"]."</th>";
-		echo "<th>".$row["Sity"]."</th>";
-		echo "<th>".$row["ResidentialAddress"]."</th>";
-		echo "<th>".$row["Phone"]."</th>";
+  		echo "<th>".$row["ResidentialAddress"]."</th>";
 		echo "<th>".$row["DateInReceiver"]."</th>";
-		echo "<th>".$row["TimeInReceiver"]."</th>";
 		echo "<th>".$row["DateOutReceiverHospital"]."</th>";
 		echo "<th>".$row["DepartmentIn"]."</th>";
 		echo "<th>".$row["DepartmentOut"]."</th>";
-		echo "<th>".$row["TypeMedicalHelp"]."</th>";
+		echo "<th>".$row["TypeMedicalHelp"]."</th>";	
+		echo "<th>".$row["WorkDescription"]."</th>";
+		echo "<th>".$row["Sity"]."</th>";
+		echo "<th>".$row["Phone"]."</th>";
+		echo "<th>".$row["TimeInReceiver"]."</th>";	
 		echo "<th>".$row["FinalDiagnosis"]."</th>";
 	}
 	echo "<br>";
