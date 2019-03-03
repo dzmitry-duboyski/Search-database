@@ -7,7 +7,7 @@
 	<title>Результат поиска:</title>
 	<link rel="stylesheet" href="css/styly.css">
 </head>
-<body>
+<body >
 <?php include("includes/searchForm.php"); ?>
 <br>
 <?php include("includes/searchInBase.php"); ?>

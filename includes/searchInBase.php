@@ -6,6 +6,17 @@
 		$fio=parsingString($fio);
 		echo 'Результаты поиска по запросу: ',"${fio[0]}",' ',"${fio[1]}",' ',"${fio[2]}";
 	}
+ 	#coхранение истории запросов
+	$userHistory="User0";
+	$dateHistory=date("Y-m-d"); 
+	$timeHistory=date("H:i:s"); 
+	$querySearchHistory=$fio[0]." ".$fio[1]." ".$fio[2];
+ 	$Sity=mysqli_real_escape_string($connection,$baseAbmulance[$i][10]);	
+	$Phone=mysqli_real_escape_string($connection,$baseAbmulance[$i][12]);
+		$query="INSERT INTO historySearch (userHistory,dateHistory,timeHistory,querySearchHistory) VALUES ('{$userHistory}','{$dateHistory}','{$timeHistory}','{$querySearchHistory}')"; 
+		$result=mysqli_query($connection,$query);
+
+
 ?>
 <?php
 //запрос БД
