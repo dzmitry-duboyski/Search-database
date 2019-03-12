@@ -76,6 +76,7 @@
 						</tr>
 						<tbody>
 						</table>
+						<?php mysqli_free_result($resultVipisan); ?>
 						<?php mysqli_close($connection);?>
 					</div>
 				</div>
