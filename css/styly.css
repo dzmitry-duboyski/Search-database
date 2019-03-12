@@ -359,7 +359,7 @@ body {
   font-family: 'Lucida', Arial, sans-serif;
   line-height: 1.42;
   background-color: #fdf9f9;
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg3.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -420,9 +420,28 @@ a {
 .searchForm__center .searchForm__title::after {
   width: 100%;
 }
+
 .searchForm__btn {
   display: inline-block;
-  background: #22b7d5;
+  /*background: #22b7d5;*/
+  background: #141823;
+  /* Old browsers */
+  background: #141823;
+  /* Old browsers */
+  background: #141823;
+  /* Old browsers */
+  background: #141823;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #141823 62%, #b0bca8 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #141823 62%, #b0bca8 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-linear-gradient(315deg, #141823 62%, #b0bca8 100%);
+  background: -o-linear-gradient(315deg, #141823 62%, #b0bca8 100%);
+  background: linear-gradient(135deg, #141823 62%, #b0bca8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141823', endColorstr='#b0bca8',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   color: #fff;
   width: 250px;
   height: 45px;
@@ -430,25 +449,26 @@ a {
   border-radius: 5px;
   text-align: center;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 15px 3px #58db8d;
-  box-shadow: 0 0 15px 3px #58db8d;
+  -webkit-box-shadow: 0 0 5px 0px #fff;
+  box-shadow: 0 0 5px 0px #fff;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
   position: absolute;
   top: 7px;
   left: 25px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .searchForm__btn:hover {
-  -webkit-box-shadow: 0 0 15px 7px #58db8d;
-  box-shadow: 0 0 15px 7px #58db8d;
+  -webkit-box-shadow: 0 0 15px 7px #fff;
+  box-shadow: 0 0 15px 7px #fff;
 }
 
 .searchForm__title {
   margin-bottom: 10px;
   font-family: Arial, Helvetica;
+  color: #fff;
 }
 
 .searchForm__title::after {
@@ -456,7 +476,7 @@ a {
   display: block;
   width: 269px;
   height: 2px;
-  background: #12aceb;
+  background: #fff;
 }
 
 /*ФОРМА*/
@@ -466,6 +486,7 @@ a {
   font-size: 18px;
   display: inline-block;
   margin-right: 5px;
+  color: #fff;
 }
 
 .form__input {
@@ -485,14 +506,15 @@ a {
   padding: 6px 20px;
   background: #18aee1;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #18aee1 20%, #4ed986 75%);
+  background: -moz-linear-gradient(-45deg, #141823 62%, #b0bca8 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #18aee1 20%, #4ed986 75%);
+  background: -webkit-linear-gradient(-45deg, #141823 62%, #b0bca8 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: -o-linear-gradient(45deg, #18aee1 20%, #4ed986 75%);
-  background: linear-gradient(45deg, #18aee1 20%, #4ed986 75%);
+  background: -webkit-linear-gradient(315deg, #141823 62%, #b0bca8 100%);
+  background: -o-linear-gradient(315deg, #141823 62%, #b0bca8 100%);
+  background: linear-gradient(135deg, #141823 62%, #b0bca8 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#18aee1', endColorstr='#4ed986',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#141823', endColorstr='#b0bca8',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -503,19 +525,28 @@ a {
 /*TABLE (ТАБЛИЦА)*/
 .table {
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: 16px;
   width: 100%;
+  text-align: center;
   /*margin: 0 auto;*/
 }
 
 .table__container {
-  background: rgba(255, 255, 255, 0.86);
-  -webkit-box-shadow: 0 0 20px 3px #d9dce0;
-  box-shadow: 0 0 20px 3px #d9dce0;
+  background: rgba(58, 53, 53, 0.98);
+  /*-webkit-box-shadow: 0 0 7px #d9dce0;*/
+  /*box-shadow: 0 0 7px #d9dce0;*/
   padding: 2px;
   border-radius: 5px;
+  color: #f5e2e2;
 }
 
 .table__tr {
   width: 100%;
+}
+
+/*количество найденных записей*/
+.amount__notes {
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
 }
