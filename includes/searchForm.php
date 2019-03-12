@@ -5,16 +5,5 @@
 		<div class="form__data">Введите данные о пациенте:</div>
 		<input type="text" name="fio" placeholder="Фамилия Имя Отчество" class="form__input" required>
 		<input type="submit" value="Поиск" name="submit" class="form__submit">
-		<!-- <br>
-		<br>
-		Дата поступления:
-		<input type="date" name="date" placeholder="" >
-		<br>
-		Дата выписки:
-		<input type="date" name="date" placeholder="" >
-		<br>
-		Номер истории:
-		<br>
-		Дата рождения: -->
 	</form>
 </div>

@@ -36,49 +36,39 @@
 								<th class="table__th">Имя</th>
 								<th class="table__th">Отчество</th>
 								<th class="table__th">Дата рождения</th>
-								<th class="table__th">Паспорт</th>
-								<th class="table__th">Адрес проживания</th>
 								<th class="table__th">Дата поступления</th>
 								<th class="table__th">Дата выписки</th>
-								<th class="table__th">Номер истории</th>
-								<th class="table__th">Отделение при поступлении</th>
 								<th class="table__th">Отделение при выписке</th>
 								<th class="table__th">Тип оказанной помощи</th>					
-								<th class="table__th">Заключительный диагноз</th>
-								<th class="table__th">Работа</th>
-								<th class="table__th">Город</th>
-								<th class="table__th">Телефон</th>
+								<th class="table__th">Подробнее</th>
 							</tr>
 						</thead>
 						<tbody>
 							<?php
-						// Use returned data (if any)
-						//3. Использование возвращаемых данных
 							$findresult=0;
 							while ($row=mysqli_fetch_assoc($result))
 							{
 								$findresult++;
-					//Выводить данные каждого ряда
-					//var_dump($row);
-					//echo $row[4];
 								echo "<tr>";
-								/*echo "<th>".$row["id"]."</th>";*/
-								echo "<th>".$row["Surname"]."</th>";
-								echo "<th>".$row["Name"]."</th>";
-								echo "<th>".$row["Patronymic"]."</th>";
-								echo "<th>".$row["DOB"]."</th>";
-								echo "<th>".$row["Document"]."</th>";
-								echo "<th>".$row["ResidentialAddress"]."</th>";
-								echo "<th>".$row["DateInReceiver"]."</th>";
-								echo "<th>".$row["DateOutReceiverHospital"]."</th>";
-								echo "<th>".$row["HistoryNamber"]."</th>";
-								echo "<th>".$row["DepartmentIn"]."</th>";
-								echo "<th>".$row["DepartmentOut"]."</th>";
-								echo "<th>".$row["TypeMedicalHelp"]."</th>";
-								echo "<th>".$row["FinalDiagnosis"]."</th>";			
-								echo "<th>".$row["WorkDescription"]."</th>";
-								echo "<th>".$row["Sity"]."</th>";
-								echo "<th>".$row["Phone"]."</th>";
+								echo "<td>".$row["Surname"]."</td>";
+								echo "<td>".$row["Name"]."</td>";
+								echo "<td>".$row["Patronymic"]."</td>";
+								echo "<td>".$row["DOB"]."</td>";
+								echo "<td>".$row["DateInReceiver"]."</td>";
+								echo "<td>".$row["DateOutReceiverHospital"]."</td>";
+								echo "<td>".$row["DepartmentOut"]."</td>";
+								echo "<td>".$row["TypeMedicalHelp"]."</td>";
+								echo "<td>"."<a href='#' onclick= \"javascript: alert( '";
+								echo "ФИО: ".$row["Surname"]." ".$row["Name"]." ".$row["Patronymic"]."\\r\\n";
+								echo "ДАТА РОЖДЕНИЯ: ".$row["DOB"]."\\r\\n";
+								echo "ПАСПОРТ: ".$row["Document"]."\\r\\n";
+								echo "АДРЕС: ".$row["ResidentialAddress"]."\\r\\n";
+								echo "ТЕЛЕФОН: ".$row["Phone"]."\\r\\n";
+								echo "НОМЕР ИСТОРИИ: №".$row["HistoryNamber"]."\\r\\n";
+								echo "ЗАКЛЮЧИТЕЛЬНЫЙ ДИАГНОЗ: ".$row["FinalDiagnosis"]."\\r\\n";
+								echo "ПОСТУПИЛ: ".$row["DateInReceiver"]." в ".$row["DepartmentIn"]."\\r\\n";
+								echo "ВЫПИСАЛСЯ: ".$row["DateOutReceiverHospital"]." из ".$row["DepartmentOut"]."\\r\\n";
+								echo "' )\">Подробнее</a></td>";
 							}
 							echo '<br>Колличество найденных записей:'.$findresult;
 							'<br>'
@@ -86,12 +76,10 @@
 						</tr>
 						<tbody>
 						</table>
-						<?php 
-						//Close database connection
-						mysqli_close($connection);
-						?></div>
+						<?php mysqli_close($connection);?>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
-	</html>
+</html>

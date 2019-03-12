@@ -1,5 +1,5 @@
-<?php include("../includes.php"); ?>
-<?php include("../connection.php"); ?>
+<?php include("../includes/includes.php"); ?>
+<?php include("../includes/connection.php"); ?>
 <?php 
 	$base = file('base_ambulator.csv');
 	$baseAbmulance = array();

@@ -1,5 +1,5 @@
-<?php include("../includes.php"); ?>
-<?php include("../connection.php"); ?>
+<?php include("../includes/includes.php"); ?>
+<?php include("../includes/connection.php"); ?>
 <?php 
 	$base = file('base_vipisan.csv');/*Присваиваем меременной значения из файла, переменная равна массиву, каждый элемент которого включает в себя строку  с данными о пациенте*/
 	/*файл base.csv должен быть в правильной кодировке utf-8*/

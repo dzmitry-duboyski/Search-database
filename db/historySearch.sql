@@ -1,0 +1,1 @@
+CREATE TABLE `hospital`.`historySearch` ( `id` INT(10) NOT NULL AUTO_INCREMENT , `userHistory` VARCHAR(30) NOT NULL , `dateHistory` VARCHAR(30) NOT NULL , `timeHistory` VARCHAR(30) NOT NULL , `querySearchHistory` VARCHAR(30) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
