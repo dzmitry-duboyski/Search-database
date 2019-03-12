@@ -405,9 +405,21 @@ a {
 
 .maincontent {
   padding-top: 110px;
+  padding-bottom: 50px;
 }
 
 /*шапка формы*/
+.searchForm__center {
+  text-align: center;
+}
+
+.searchForm__center .searchForm__title {
+  margin-bottom: 15px;
+}
+
+.searchForm__center .searchForm__title::after {
+  width: 100%;
+}
 .searchForm__btn {
   display: inline-block;
   background: #22b7d5;

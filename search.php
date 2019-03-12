@@ -26,7 +26,15 @@
 		<div class="maincontent">
 			<div class="container">
 				<div class="table__container">
-					<?php include("includes/searchForm.php"); ?>
+					<div class="searchForm searchForm__center ">
+						<a href="index.php" class="searchForm__btn">На главную</a>
+						<h1 class="searchForm__title">Поиск пациентов</h1>
+						<form action="search.php" method="post" class="form">
+							<div class="form__data">Введите данные о пациенте:</div>
+							<input type="text" name="fio" placeholder="Фамилия Имя Отчество" class="form__input" required>
+							<input type="submit" value="Поиск" name="submit" class="form__submit">
+						</form>
+					</div>
 					<br>
 					<?php include("includes/searchInBase.php"); ?>
 					<table class="table" border="1">
@@ -76,7 +84,6 @@
 						</tr>
 						<tbody>
 						</table>
-						<?php mysqli_free_result($resultVipisan); ?>
 						<?php mysqli_close($connection);?>
 					</div>
 				</div>

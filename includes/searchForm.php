@@ -1,4 +1,4 @@
-<div class="searchForm">
+<div class="searchForm ">
 	<a href="index.php" class="searchForm__btn">На главную</a>
 	<h1 class="searchForm__title">Поиск пациентов</h1>
 	<form action="search.php" method="post" class="form">
