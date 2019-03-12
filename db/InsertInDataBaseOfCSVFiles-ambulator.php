@@ -3,7 +3,6 @@
 <?php 
 	$base = file('base_ambulator.csv');
 	$baseAbmulance = array();
-
    	for ($i=0; $i <=count($base) ; $i++)
     { 
 		$str=$base[$i];
@@ -14,7 +13,6 @@
 	/*echo "<pre>";
 	 print_r($baseAbmulance[$i]);echo "<hr>";
 	 echo "</pre>";	*/
-
 	$none="-";
 	$Surname=mysqli_real_escape_string($connection,$baseAbmulance[$i][4]);
 	$Name=mysqli_real_escape_string($connection,$baseAbmulance[$i][5]);

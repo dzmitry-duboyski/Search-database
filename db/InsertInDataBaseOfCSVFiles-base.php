@@ -4,13 +4,7 @@
 	$base = file('base.csv');/*Присваиваем меременной значения из файла, переменная равна массиву, каждый элемент которого включает в себя строку  с данными о пациенте*/
 	/*файл base.csv должен быть в правильной кодировке utf-8*/
 	$baseAbmulance = array();/*многомерный массив где каздый элемент это  отдельное обращение пациента*/
-//фамилия для поиска
-/*	$surname="ДУБОВСКИЙ";*/
-	//имя для поиска
-/*	$name="ДМИТРИЙ";*/
-
 	//массив для временной фильтрации данных
-
    	for ($i=0; $i <=count($base) ; $i++)
     { 
 		$str=$base[$i];/* присваиваем строке данные об обращении пациента*/
@@ -40,12 +34,9 @@
 	$WorkDescription=mysqli_real_escape_string($connection,$baseAbmulance[$i][16]);/*+*/
 	$Sity=mysqli_real_escape_string($connection,$baseAbmulance[$i][11]);	/*+*/
 	$Phone=mysqli_real_escape_string($connection,$baseAbmulance[$i][15]);	/*+*/
-
-		//2. Выполнить запрос БД
-		//2. Perform database query
+		// Выполнить запрос БД
+		// Perform database query
 		$query="INSERT INTO patient (Surname,Name,Patronymic,DOB,Document,ResidentialAddress,DateInReceiver,DateOutReceiverHospital,HistoryNamber,DepartmentIn,DepartmentOut,TypeMedicalHelp,FinalDiagnosis,WorkDescription,Sity,Phone) VALUES ('{$Surname}','{$Name}','{$Patronymic}','{$DOB}','{$Document}','{$ResidentialAddress}','{$DateInReceiver}','{$DateOutReceiverHospital}','{$HistoryNamber}','{$DepartmentIn}','{$DepartmentOut}','{$TypeMedicalHelp}','{$FinalDiagnosis}','{$WorkDescription}','{$Sity}','{$Phone}')"; 
-
-		/*SELECT * FROM patient*/
 		$result=mysqli_query($connection,$query);//Выполняем запрос к БД
 		if ($result) {//проверяем успешность выполнения запроса
 			//echo "+ ";
