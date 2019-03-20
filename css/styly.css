@@ -358,8 +358,9 @@ html, body {
 body {
   font-family: 'Lucida', Arial, sans-serif;
   line-height: 1.42;
-  background-color: #fdf9f9;
+  background-color: #566465;
   background-image: url("../img/bg3.jpg");
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -390,6 +391,23 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+}
+
+a:link {
+  color: #f5e2e2;
+}
+
+a:visited{
+  color: #f5e2e2;
+}
+
+a:hover{
+  color: #5e6c6d;
+text-shadow: 1px 1px 2px black, 0 0 1em white;
+}
+
+a:active{
+  color: #5e6c6d;
 }
 
 .wrapper {
@@ -549,4 +567,69 @@ a {
   display: inline-block;
   font-size: 25px;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Стили модального окна */
+/* слой затемнения */
+.dm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+/* активируем слой затемнения и модальное окно */
+.dm-overlay:target {
+    display: block;
+/* анимация и время задержки */
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+/* блочная таблица */
+.dm-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+/* ячейка блочной таблицы */
+.dm-cell {
+    display: table-cell;
+    padding: 0 1em;
+    vertical-align: middle;
+    text-align: center;
+}
+/* модальный блок */
+.dm-modal {
+    display: inline-block;
+    padding: 20px;
+/* максимально возможная ширина */
+    max-width: 50em;
+    background: #607d8b;
+/* внешняя тень блока */
+    -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.22), 0px 19px 60px rgba(0, 0, 0, 0.3);
+    color: #cfd8dc;
+    text-align: left;
+/* анимация и время задержки */
+    -webkit-animation: fade .8s;
+    -moz-animation: fade .8s;
+    animation: fade .8s;
 }
