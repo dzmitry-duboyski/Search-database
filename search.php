@@ -40,6 +40,7 @@
 					<table class="table" border="1">
 						<thead>
 							<tr class="table__tr">
+								<th class="table__th">№ Истории</th>
 								<th class="table__th">Фамилия</th>
 								<th class="table__th">Имя</th>
 								<th class="table__th">Отчество</th>
@@ -48,7 +49,6 @@
 								<th class="table__th">Дата выписки</th>
 								<th class="table__th">Отделение при выписке</th>
 								<th class="table__th">Тип оказанной помощи</th>					
-								<th class="table__th">Подробнее</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -58,16 +58,15 @@
 							{
 								$findresult++;
 								echo "<tr>";
-								echo "<td>".$row["Surname"]."</td>";
-								echo "<td>".$row["Name"]."</td>";
-								echo "<td>".$row["Patronymic"]."</td>";
-								echo "<td>".$row["DOB"]."</td>";
-								echo "<td>".$row["DateInReceiver"]."</td>";
-								echo "<td>".$row["DateOutReceiverHospital"]."</td>";
-								echo "<td>".$row["DepartmentOut"]."</td>";
-								echo "<td>".$row["TypeMedicalHelp"]."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>Подробнее</a>"."</td>";
-								
+								echo "<td>"."<a href='#win1' class='btn'>".$row["HistoryNamber"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["Surname"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["Name"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["Patronymic"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["DOB"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["DateInReceiver"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["DateOutReceiverHospital"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["DepartmentOut"]."</a>"."</td>";
+								echo "<td>"."<a href='#win1' class='btn'>".$row["TypeMedicalHelp"]."</a>"."</td>";
 							?>
 							<?php include("includes/info.php"); ?>
 							<?php
