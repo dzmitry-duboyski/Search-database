@@ -21,7 +21,6 @@
 						echo "<br>Тип оказанной помощи: ".$row["TypeMedicalHelp"];
 						echo "<br>Заключительный диагноз: ".$row["FinalDiagnosis"];
 						echo "<hr>";
-
                     ?>
                 </div>
                 <h3>
