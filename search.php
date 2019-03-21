@@ -67,22 +67,12 @@
 								echo "<td>".$row["DepartmentOut"]."</td>";
 								echo "<td>".$row["TypeMedicalHelp"]."</td>";
 								echo "<td>"."<a href='#win1' class='btn'>Подробнее</a>"."</td>";
+								
 							?>
 							<?php include("includes/info.php"); ?>
 							<?php
-							/*	echo "<td>"."<a href='#' onclick= \"javascript: alert( '";
-								echo "ФИО: ".$row["Surname"]." ".$row["Name"]." ".$row["Patronymic"]."\\r\\n";
-								echo "ДАТА РОЖДЕНИЯ: ".$row["DOB"]."\\r\\n";
-								echo "ПАСПОРТ: ".$row["Document"]."\\r\\n";
-								echo "АДРЕС: ".$row["ResidentialAddress"]."\\r\\n";
-								echo "ТЕЛЕФОН: ".$row["Phone"]."\\r\\n";
-								echo "НОМЕР ИСТОРИИ: №".$row["HistoryNamber"]."\\r\\n";
-								echo "ЗАКЛЮЧИТЕЛЬНЫЙ ДИАГНОЗ: ".$row["FinalDiagnosis"]."\\r\\n";
-								echo "ПОСТУПИЛ: ".$row["DateInReceiver"]." в ".$row["DepartmentIn"]."\\r\\n";
-								echo "ВЫПИСАЛСЯ: ".$row["DateOutReceiverHospital"]." из ".$row["DepartmentOut"]."\\r\\n";
-								echo "' )\">Подробнее</a></td>";*/
-							}
-							echo '<br>Колличество найденных записей:'.$findresult;
+								}
+								echo '<br>Колличество найденных записей:'.$findresult;
 							'<br>'
 							?>
 						</tr>
