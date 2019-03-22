@@ -426,6 +426,20 @@ a:active{
   padding-bottom: 50px;
 }
 
+/* .footer {
+  width: 1000px;
+  margin: -100px auto 0;
+  height: 20px;
+  position: relative;
+
+  color:#7b8d9d;
+  text-align: center;
+  font-size: 16pt;
+  text-decoration:  underline;
+ margin-bottom:  10px;
+ display: inline-block;
+} */
+
 /*шапка формы*/
 .searchForm__center {
   text-align: center;
@@ -621,3 +635,30 @@ a:active{
     -moz-animation: fade .8s;
     animation: fade .8s;
 }
+
+/* 
+.telegram-ico{
+  padding: 0px 5px  0px 5px ;
+}
+.developer-link:link
+{
+  color: #7b8d9d;
+}
+.developer-link:visited
+{
+  color: #7b8d9d;
+}
+.developer-link:hover {
+  transition-duration: .2s;
+  text-shadow:2px 2px 2px black;
+}
+.developer-link::not(:hover) 
+{
+  transition-duration: 1s;
+}   
+#footer {
+  color:#7b8d9d;
+  text-align: center;
+  font-size: 16pt;
+  text-decoration:  underline;
+} */

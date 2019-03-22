@@ -2,7 +2,7 @@
     <div class="dm-table">
         <div class="dm-cell">
             <div class="dm-modal">
-                <h3>Подробная информация об обращении пациента</h3>
+                <h3>Подробная информация</h3>
                 <div class="pl-left">
                     <?php 
                     	echo "<br><hr>Фамилия: ".$row["Surname"];
@@ -24,7 +24,8 @@
                     ?>
                 </div>
                 <h3>
-             	<a href="#close" class="close">Назад</a>
+				<a href="#close" class="close">Назад</a>
+				<a href="#" onclick="window.print();" class="close">Печать</a>
              	</h3>
             </div>
         </div>
