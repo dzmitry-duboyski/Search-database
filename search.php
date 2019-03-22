@@ -58,15 +58,15 @@
 							{
 								$findresult++;
 								echo "<tr>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["HistoryNamber"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["Surname"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["Name"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["Patronymic"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["DOB"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["DateInReceiver"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["DateOutReceiverHospital"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["DepartmentOut"]."</a>"."</td>";
-								echo "<td>"."<a href='#win1' class='btn'>".$row["TypeMedicalHelp"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["HistoryNamber"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["Surname"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["Name"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["Patronymic"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["DOB"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["DateInReceiver"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["DateOutReceiverHospital"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["DepartmentOut"]."</a>"."</td>";
+								echo "<td>"."<a href='#win".$findresult."' class='btn'>".$row["TypeMedicalHelp"]."</a>"."</td>";
 							?>
 							<?php include("includes/info.php"); ?>
 							<?php

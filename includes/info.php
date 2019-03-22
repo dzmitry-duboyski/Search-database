@@ -1,4 +1,4 @@
-<div class="dm-overlay" id="win1">
+<div class="dm-overlay" id="win<?php echo $findresult;?>">
     <div class="dm-table">
         <div class="dm-cell">
             <div class="dm-modal">
