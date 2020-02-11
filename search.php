@@ -80,7 +80,7 @@
 						<?php mysqli_close($connection);?>
 					</div>
 				</div>
-<!-- 		<footer class="footer">
+		<footer class="footer">
 			Create by 
 				<a class="developer-link" href="https://t.me/Dzmitry_Dubovsky">
 					<img class="telegram-ico" height="17px" src="icons/telegram-app.png">
@@ -91,11 +91,8 @@
 					<img class="telegram-ico" height="17px" src="icons/telegram-app.png">
 					-Hlushak Dzmitry
 				</a>
-			</footer> -->			
-
-
+			</footer>		
 			</div>
-
 		</div>
 	</body>
 </html>
